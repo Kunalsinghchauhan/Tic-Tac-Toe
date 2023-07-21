@@ -2,7 +2,6 @@ package com.sync_intern.tictactoe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -21,9 +20,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var btn7: ImageView
     lateinit var btn8: ImageView
     lateinit var btn9: ImageView
-    lateinit var playerOneLayout: LinearLayout
-    lateinit var playerTwoLayout: LinearLayout
-    var playerTurn = 1
+    private lateinit var playerOneLayout: LinearLayout
+    private lateinit var playerTwoLayout: LinearLayout
+    private var playerTurn = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -195,7 +194,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkWinner() {
+    private fun checkWinner() {
         val playerSymbol = if (playerTurn == 1) "x" else "o"
 
         if (checkCombination(btn1, btn2, btn3, symbol = playerSymbol) ||

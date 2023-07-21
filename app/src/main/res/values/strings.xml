@@ -5,4 +5,6 @@
     <string name="player_o_name">Player O name</string>
     <string name="enter_players_names">Enter Players Names</string>
     <string name="reset_game">Reset Game</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
 </resources>
