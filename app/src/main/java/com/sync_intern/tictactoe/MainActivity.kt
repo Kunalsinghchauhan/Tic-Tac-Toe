@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun changePlayerTurn(playerTurn: Int) {
+    private fun changePlayerTurn(playerTurn: Int) {
         if (playerTurn == 2) {
             playerOneLayout.setBackgroundResource(R.drawable.white_border)
             playerTwoLayout.setBackgroundResource(R.drawable.rounded_rectangle)
