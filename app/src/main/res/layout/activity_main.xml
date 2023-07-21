@@ -102,7 +102,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="1" />
+               />
 
             <ImageView
                 android:id="@+id/btn2"
@@ -113,7 +113,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="2" />
+               />
 
             <ImageView
                 android:id="@+id/btn3"
@@ -124,7 +124,7 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="3" />
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -142,7 +142,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="4" />
+                 />
 
             <ImageView
                 android:id="@+id/btn5"
@@ -153,7 +153,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="5" />
+                 />
 
             <ImageView
                 android:id="@+id/btn6"
@@ -164,7 +164,7 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/white"
-                android:contentDescription="6" />
+                 />
         </LinearLayout>
 
         <LinearLayout
@@ -182,7 +182,7 @@
                 android:layout_marginEnd="7dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/white"
-                android:contentDescription="7" />
+             />
 
             <ImageView
                 android:id="@+id/btn8"
@@ -193,7 +193,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/white"
-                android:contentDescription="8" />
+              />
 
             <ImageView
                 android:id="@+id/btn9"
@@ -204,7 +204,7 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/white"
-                android:contentDescription="9" />
+                 />
         </LinearLayout>
 
     </LinearLayout>
@@ -214,8 +214,8 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="Reset Game"
-        android:textSize="20dp"
+        android:text="@string/reset_game"
+        android:textSize="20sp"
         android:background="@drawable/rounded_rectangle"
         android:backgroundTint="@color/button_color"
         app:layout_constraintBottom_toBottomOf="parent"

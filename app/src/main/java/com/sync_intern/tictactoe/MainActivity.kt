@@ -196,32 +196,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkWinner() {
-        if (checkCombination(btn1, btn2, btn3) ||
-            checkCombination(btn4, btn5, btn6) ||
-            checkCombination(btn7, btn8, btn9) ||
-            checkCombination(btn1, btn4, btn7) ||
-            checkCombination(btn2, btn5, btn8) ||
-            checkCombination(btn3, btn6, btn9) ||
-            checkCombination(btn1, btn5, btn9) ||
-            checkCombination(btn3, btn5, btn7)
+        val playerSymbol = if (playerTurn == 1) "x" else "o"
+
+        if (checkCombination(btn1, btn2, btn3, symbol = playerSymbol) ||
+            checkCombination(btn4, btn5, btn6, symbol = playerSymbol) ||
+            checkCombination(btn7, btn8, btn9, symbol = playerSymbol) ||
+            checkCombination(btn1, btn4, btn7, symbol = playerSymbol) ||
+            checkCombination(btn2, btn5, btn8, symbol = playerSymbol) ||
+            checkCombination(btn3, btn6, btn9, symbol = playerSymbol) ||
+            checkCombination(btn1, btn5, btn9, symbol = playerSymbol) ||
+            checkCombination(btn3, btn5, btn7, symbol = playerSymbol)
         ) {
-            showWinner(tvplayer1Name.text.toString())
-        } else if (
-            checkCombination(btn1, btn2, btn3, symbol = "o") ||
-            checkCombination(btn4, btn5, btn6, symbol = "o") ||
-            checkCombination(btn7, btn8, btn9, symbol = "o") ||
-            checkCombination(btn1, btn4, btn7, symbol = "o") ||
-            checkCombination(btn2, btn5, btn8, symbol = "o") ||
-            checkCombination(btn3, btn6, btn9, symbol = "o") ||
-            checkCombination(btn1, btn5, btn9, symbol = "o") ||
-            checkCombination(btn3, btn5, btn7, symbol = "o")
-        ) {
-            showWinner(tvplayer2Name.text.toString())
+            if (playerTurn == 1) {
+                showWinner(tvplayer2Name.text.toString())
+            } else {
+                showWinner(tvplayer1Name.text.toString())
+            }
         } else if (areAllButtonsClicked()) {
             showDraw()
         }
     }
-
 
 
     private fun checkCombination(vararg buttons: ImageView, symbol: String = "x"): Boolean {
